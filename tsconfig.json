@@ -1,7 +1,10 @@
 {
-    "files": [
-        "src/main.ts"
+    "include": [
+        "src"
     ],
+    "exclude": [
+        "src/templates"
+    ]
     "compilerOptions": {
         "noImplicitAny": true,
         "target": "es5"

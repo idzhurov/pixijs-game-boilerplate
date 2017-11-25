@@ -17,18 +17,18 @@ gulp.task("ts:build", function () {
         .js.pipe(gulp.dest("dist"));
 });
 
-// run webpack to compile the script into a bundle
+// run webpack to compile the script into a bundle - note that it needs the ts to already be compiled
 gulp.task('webpack', function() {
 	return gulp.src('dist/')
     .pipe(webpack( require('./webpack.config.js') ))
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('other-task', ['ts:build'], function() {
+gulp.task('build', ['ts:build'], function() {
   return gulp.src('dist/')
     .pipe(webpack( require('./webpack.config.js') ))
     .pipe(gulp.dest('dist/'));
 });
 
 // default includes all
-gulp.task('default', ['copy:html', 'other-task']);
+gulp.task('default', ['copy:html', 'build']);
