@@ -17,8 +17,17 @@
   },
   "homepage": "https://github.com/idzhurov/pixijs-game-boilerplate#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-typescript": "^3.2.3",
-    "typescript": "^2.6.1"
+    "@types/node": "^8.0.53",
+    "@types/pixi.js": "^4.6.0",
+    "event-stream": "^3.3.4",
+    "gulp": "3.9.1",
+    "gulp-typescript": "3.2.3",
+    "lite-server": "^2.3.0",
+    "typescript": "2.6.1",
+    "webpack": "^3.8.1",
+    "webpack-stream": "^4.0.0"
+  },
+  "dependencies": {
+    "pixi.js": "^4.6.1"
   }
 }
