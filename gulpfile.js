@@ -5,9 +5,15 @@ var webpack = require('webpack-stream');
 var OUT_DIR = './dist';
 
 // always copy the html first to dist folder
-var srcIndex = './src/templates/index.html';
+var srcHTML = './src/templates/index.html';
+var srcCSS = './src/templates/style.css';
+
 gulp.task('copy:html', function() {
-	gulp.src(srcIndex).pipe(gulp.dest(OUT_DIR));
+	gulp.src(srcHTML).pipe(gulp.dest(OUT_DIR));
+});
+
+gulp.task('copy:css', function() {
+    gulp.src(srcCSS).pipe(gulp.dest(OUT_DIR));
 });
 
 // compile typescript
@@ -31,4 +37,4 @@ gulp.task('build', ['ts:build'], function() {
 });
 
 // default includes all
-gulp.task('default', ['copy:html', 'build']);
+gulp.task('default', ['copy:html', 'copy:css', 'build']);

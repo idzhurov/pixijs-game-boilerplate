@@ -6,8 +6,13 @@ export class Game extends PIXI.Application {
 	stage: PIXI.Container;
 
 	start() {
-		this.renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor: 0x1099bb});
+		this.renderer = PIXI.autoDetectRenderer(window.innerWidth, window.innerHeight, {backgroundColor: 0x1099bb});
 		document.body.appendChild(this.renderer.view);
+		this.stage = new PIXI.Container();
+		var welcome = new PIXI.Text('Hello World!');
+		this.stage.addChild(welcome);
+
+		this.renderer.render(this.stage);
 	}
 
 }
