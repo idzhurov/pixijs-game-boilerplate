@@ -1,0 +1,24 @@
+{
+  "name": "pixijs-game-boilerplate",
+  "version": "1.0.0",
+  "description": "HTML5 Game boilerplate",
+  "main": "./dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idzhurov/pixijs-game-boilerplate.git"
+  },
+  "author": "Ivan Dzhurov (dzhurovivan@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/idzhurov/pixijs-game-boilerplate/issues"
+  },
+  "homepage": "https://github.com/idzhurov/pixijs-game-boilerplate#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.2.3",
+    "typescript": "^2.6.1"
+  }
+}
