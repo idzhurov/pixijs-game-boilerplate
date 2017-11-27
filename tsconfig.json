@@ -6,7 +6,7 @@
         "src/templates"
     ],
     "compilerOptions": {
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "target": "es5",
         "sourceMap": true
     }

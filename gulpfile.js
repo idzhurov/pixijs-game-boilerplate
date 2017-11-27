@@ -7,6 +7,7 @@ var OUT_DIR = './dist';
 // always copy the html first to dist folder
 var srcHTML = './src/templates/index.html';
 var srcCSS = './src/templates/style.css';
+var srcAssets = './src/assets/textures/*';
 
 gulp.task('copy:html', function() {
 	gulp.src(srcHTML).pipe(gulp.dest(OUT_DIR));
@@ -14,6 +15,10 @@ gulp.task('copy:html', function() {
 
 gulp.task('copy:css', function() {
     gulp.src(srcCSS).pipe(gulp.dest(OUT_DIR));
+});
+
+gulp.task('copy:assets', function() {
+    gulp.src(srcAssets).pipe(gulp.dest(OUT_DIR + '/assets/'));
 });
 
 // compile typescript
@@ -37,4 +42,4 @@ gulp.task('build', ['ts:build'], function() {
 });
 
 // default includes all
-gulp.task('default', ['copy:html', 'copy:css', 'build']);
+gulp.task('default', ['copy:html', 'copy:css', 'copy:assets', 'build']);
